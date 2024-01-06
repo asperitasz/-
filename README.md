@@ -1,3 +1,6 @@
+exe链接：
+链接: https://pan.baidu.com/s/1AARzw9NxkyaIkWULxIidWg?pwd=vjpi 提取码: vjpi 
+
 ![](https://github.com/asperitasz/Digital-Image-Processing-system/blob/main/imgs/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%B3%BB%E7%BB%9F_01.png)
 ![](https://github.com/asperitasz/Digital-Image-Processing-system/blob/main/imgs/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%B3%BB%E7%BB%9F_02.png)
 ![](https://github.com/asperitasz/Digital-Image-Processing-system/blob/main/imgs/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%B3%BB%E7%BB%9F_03.png)
