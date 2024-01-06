@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1391</width>
+    <height>743</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="img_src">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>100</y>
+      <width>512</width>
+      <height>512</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="img_demo">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>100</y>
+      <width>512</width>
+      <height>512</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>710</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>处理后图像</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>710</y>
+      <width>72</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>原图像</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="para1">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>10</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="para2">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>10</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>20</y>
+      <width>141</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>伸缩长</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>线性灰度变换斜率</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>位图分割比特位</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>对数变换参数</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>幂律参数c</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>高斯噪声均值</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>椒盐噪声比例prob</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>泊松噪声λ值</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>均值滤波核边长</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>中值滤波核边长</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>低通滤波器截止频率</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>高通滤波器截止频率</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>二值化参数</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="comboBox_2">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>20</y>
+      <width>131</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>伸缩宽</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>线性斜率截距</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>幂律参数λ</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>高斯噪声方差</string>
+     </property>
+    </item>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1391</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="read1">
+    <property name="title">
+     <string>图像读入</string>
+    </property>
+    <addaction name="example"/>
+    <addaction name="open"/>
+    <addaction name="save"/>
+   </widget>
+   <widget class="QMenu" name="show1">
+    <property name="title">
+     <string>图像显示</string>
+    </property>
+    <addaction name="grayscale"/>
+    <addaction name="binarization"/>
+    <addaction name="stretch"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="segment1">
+    <property name="title">
+     <string>图像分割</string>
+    </property>
+    <addaction name="threshold"/>
+    <addaction name="regiongrow"/>
+    <addaction name="separator"/>
+    <addaction name="actionCanny"/>
+    <addaction name="actionKirsch"/>
+   </widget>
+   <widget class="QMenu" name="feature1">
+    <property name="title">
+     <string>特征提取</string>
+    </property>
+    <addaction name="inversion"/>
+    <addaction name="action_5"/>
+   </widget>
+   <widget class="QMenu" name="graytrans1">
+    <property name="title">
+     <string>灰度变换</string>
+    </property>
+    <addaction name="linear"/>
+    <addaction name="logarithm"/>
+    <addaction name="power"/>
+    <addaction name="bitmap"/>
+   </widget>
+   <widget class="QMenu" name="histogram1">
+    <property name="title">
+     <string>直方图显示</string>
+    </property>
+    <addaction name="display"/>
+    <addaction name="equalization"/>
+    <addaction name="regularization"/>
+   </widget>
+   <widget class="QMenu" name="noise1">
+    <property name="title">
+     <string>增加噪声</string>
+    </property>
+    <addaction name="gaussian"/>
+    <addaction name="salt"/>
+    <addaction name="poisson"/>
+    <addaction name="speckle"/>
+   </widget>
+   <widget class="QMenu" name="smooth1">
+    <property name="title">
+     <string>图像平滑</string>
+    </property>
+    <addaction name="mean"/>
+    <addaction name="median"/>
+    <addaction name="gaussian_f"/>
+    <addaction name="wiener"/>
+    <addaction name="lowpass"/>
+   </widget>
+   <widget class="QMenu" name="sharpen1">
+    <property name="title">
+     <string>图像锐化</string>
+    </property>
+    <addaction name="sobel"/>
+    <addaction name="laplace"/>
+    <addaction name="highpass"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>形态学处理</string>
+    </property>
+    <addaction name="action"/>
+    <addaction name="action_2"/>
+    <addaction name="action_3"/>
+    <addaction name="action_4"/>
+   </widget>
+   <addaction name="read1"/>
+   <addaction name="show1"/>
+   <addaction name="graytrans1"/>
+   <addaction name="histogram1"/>
+   <addaction name="noise1"/>
+   <addaction name="smooth1"/>
+   <addaction name="sharpen1"/>
+   <addaction name="segment1"/>
+   <addaction name="feature1"/>
+   <addaction name="menu"/>
+  </widget>
+  <action name="example">
+   <property name="text">
+    <string>示例</string>
+   </property>
+  </action>
+  <action name="open">
+   <property name="text">
+    <string>打开</string>
+   </property>
+  </action>
+  <action name="grayscale">
+   <property name="text">
+    <string>灰度化</string>
+   </property>
+  </action>
+  <action name="binarization">
+   <property name="text">
+    <string>二值化</string>
+   </property>
+  </action>
+  <action name="stretch">
+   <property name="text">
+    <string>伸缩</string>
+   </property>
+  </action>
+  <action name="linear1">
+   <property name="text">
+    <string>线性变换</string>
+   </property>
+  </action>
+  <action name="logarithm1">
+   <property name="text">
+    <string>对数变换</string>
+   </property>
+  </action>
+  <action name="power1">
+   <property name="text">
+    <string>幂律变换</string>
+   </property>
+  </action>
+  <action name="bitmap1">
+   <property name="text">
+    <string>位图切割</string>
+   </property>
+  </action>
+  <action name="display1">
+   <property name="text">
+    <string>直方图显示</string>
+   </property>
+  </action>
+  <action name="equalization1">
+   <property name="text">
+    <string>直方图均衡化</string>
+   </property>
+  </action>
+  <action name="regularization1">
+   <property name="text">
+    <string>直方图规定化</string>
+   </property>
+  </action>
+  <action name="gaussian1">
+   <property name="text">
+    <string>高斯噪声</string>
+   </property>
+  </action>
+  <action name="salt1">
+   <property name="text">
+    <string>椒盐噪声</string>
+   </property>
+  </action>
+  <action name="poisson1">
+   <property name="text">
+    <string>泊松噪声</string>
+   </property>
+  </action>
+  <action name="speckle1">
+   <property name="text">
+    <string>斑点噪声</string>
+   </property>
+  </action>
+  <action name="mean1">
+   <property name="text">
+    <string>均值滤波</string>
+   </property>
+  </action>
+  <action name="gaussian_f1">
+   <property name="text">
+    <string>中值滤波</string>
+   </property>
+  </action>
+  <action name="wiener1">
+   <property name="text">
+    <string>wiener滤波</string>
+   </property>
+  </action>
+  <action name="lowpass1">
+   <property name="text">
+    <string>低通滤波器</string>
+   </property>
+  </action>
+  <action name="median1">
+   <property name="text">
+    <string>高斯滤波</string>
+   </property>
+  </action>
+  <action name="gradient">
+   <property name="text">
+    <string>梯度法</string>
+   </property>
+  </action>
+  <action name="roberts">
+   <property name="text">
+    <string>罗伯茨梯度法</string>
+   </property>
+  </action>
+  <action name="sobel1">
+   <property name="text">
+    <string>索伯尔和普特维特算法</string>
+   </property>
+  </action>
+  <action name="laplace1">
+   <property name="text">
+    <string>拉普拉斯算法</string>
+   </property>
+  </action>
+  <action name="LoG">
+   <property name="text">
+    <string>LoG算法</string>
+   </property>
+  </action>
+  <action name="highpass1">
+   <property name="text">
+    <string>高通滤波器</string>
+   </property>
+  </action>
+  <action name="threshold">
+   <property name="text">
+    <string>阈值法</string>
+   </property>
+  </action>
+  <action name="regiongrow">
+   <property name="text">
+    <string>区域生长法</string>
+   </property>
+  </action>
+  <action name="split">
+   <property name="text">
+    <string>分裂合并法</string>
+   </property>
+  </action>
+  <action name="actionCanny">
+   <property name="text">
+    <string>Canny算子</string>
+   </property>
+  </action>
+  <action name="actionKirsch">
+   <property name="text">
+    <string>Kirsch算子</string>
+   </property>
+  </action>
+  <action name="actionRANSAC">
+   <property name="text">
+    <string>RANSAC算子</string>
+   </property>
+  </action>
+  <action name="actionHough">
+   <property name="text">
+    <string>Hough变换</string>
+   </property>
+  </action>
+  <action name="parameters">
+   <property name="text">
+    <string>特征参数</string>
+   </property>
+  </action>
+  <action name="mark">
+   <property name="text">
+    <string>区域标记</string>
+   </property>
+  </action>
+  <action name="extraction">
+   <property name="text">
+    <string>图像提取</string>
+   </property>
+  </action>
+  <action name="save">
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </action>
+  <action name="truecolor">
+   <property name="text">
+    <string>真彩色图像处理
+</string>
+   </property>
+  </action>
+  <action name="falsecolor">
+   <property name="text">
+    <string>伪彩色图像处理</string>
+   </property>
+  </action>
+  <action name="inversion">
+   <property name="text">
+    <string>图像反转</string>
+   </property>
+  </action>
+  <action name="histogram_c">
+   <property name="text">
+    <string>直方图显示</string>
+   </property>
+  </action>
+  <action name="linear">
+   <property name="text">
+    <string>线性变换</string>
+   </property>
+  </action>
+  <action name="logarithm">
+   <property name="text">
+    <string>幂律变换</string>
+   </property>
+  </action>
+  <action name="power">
+   <property name="text">
+    <string>对数变换</string>
+   </property>
+  </action>
+  <action name="bitmap">
+   <property name="text">
+    <string>位图切割</string>
+   </property>
+  </action>
+  <action name="display">
+   <property name="text">
+    <string>直方图显示</string>
+   </property>
+  </action>
+  <action name="equalization">
+   <property name="text">
+    <string>直方图均衡化</string>
+   </property>
+  </action>
+  <action name="regularization">
+   <property name="text">
+    <string>直方图规定化</string>
+   </property>
+  </action>
+  <action name="gaussian">
+   <property name="text">
+    <string>高斯噪声</string>
+   </property>
+  </action>
+  <action name="salt">
+   <property name="text">
+    <string>椒盐噪声</string>
+   </property>
+  </action>
+  <action name="poisson">
+   <property name="text">
+    <string>泊松噪声</string>
+   </property>
+  </action>
+  <action name="speckle">
+   <property name="text">
+    <string>斑点噪声</string>
+   </property>
+  </action>
+  <action name="mean">
+   <property name="text">
+    <string>均值滤波</string>
+   </property>
+  </action>
+  <action name="median">
+   <property name="text">
+    <string>中值滤波</string>
+   </property>
+  </action>
+  <action name="gaussian_f">
+   <property name="text">
+    <string>高斯滤波</string>
+   </property>
+  </action>
+  <action name="wiener">
+   <property name="text">
+    <string>wiener滤波</string>
+   </property>
+  </action>
+  <action name="lowpass">
+   <property name="text">
+    <string>低通滤波器</string>
+   </property>
+  </action>
+  <action name="sobel">
+   <property name="text">
+    <string>索伯尔和普特维特算法</string>
+   </property>
+  </action>
+  <action name="laplace">
+   <property name="text">
+    <string>拉普拉斯算法</string>
+   </property>
+  </action>
+  <action name="highpass">
+   <property name="text">
+    <string>高通滤波器</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>腐蚀</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>膨胀</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>开运算</string>
+   </property>
+  </action>
+  <action name="action_4">
+   <property name="text">
+    <string>闭运算</string>
+   </property>
+  </action>
+  <action name="action_5">
+   <property name="text">
+    <string>轮廓提取</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
